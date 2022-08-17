@@ -2,10 +2,10 @@ public class Main {
     public static void main(String[] args) {
         //Задание 1
         System.out.println("\nЗадание 1");
-        String firstName = "Ivan ";
-        String middleName = "Ivanovich ";
-        String lastName = "Ivanov ";
-        String fullName = lastName + firstName + middleName;
+        String firstName = "Ivan";
+        String middleName = "Ivanovich";
+        String lastName = "Ivanov";
+        String fullName = lastName + " " + firstName + " " + middleName;
         System.out.println("ФИО сотрудника — " + fullName);
         //Задание 2
         System.out.println("\nЗадание 2");
@@ -17,7 +17,7 @@ public class Main {
         sb.delete(0, fullName.length());
         sb.insert(0, "Иванов Семён Сумёнович");
         String newFullName = sb.toString();
-        newFullName = newFullName.replace("ё","е");
+        newFullName = newFullName.replace("ё", "е");
         System.out.println(newFullName);
     }
 }
