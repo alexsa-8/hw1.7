@@ -19,5 +19,17 @@ public class Main {
         String newFullName = sb.toString();
         newFullName = newFullName.replace("ё", "е");
         System.out.println(newFullName);
+        //Задание 4
+        System.out.println("\nЗадание 4");
+        System.out.println(fullName);
+        int index1 = fullName.indexOf(' ');
+        int index2 = fullName.indexOf(' ', index1 + 1);
+        int index3 = fullName.length();
+        System.out.println("В строке " + fullName + " пробел ' ' находится под индексом " + index1 + " и " + index2 + ".");
+        System.out.println("Длина строки " + index3 + " ячейка.");
+        String lastName1 = fullName.substring(0, index1);
+        String firstName1 = fullName.substring(index1, index2);
+        String middleName1 = fullName.substring(index2, index3);
+        System.out.println(lastName1 + "\n" + firstName1 + "\n" + middleName1);
     }
 }
