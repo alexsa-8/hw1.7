@@ -1,4 +1,3 @@
-//import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         //Задание 1
@@ -40,16 +39,16 @@ public class Main {
         int i4 = lFullN.indexOf(' ');
         int i5 = lFullN.indexOf(' ', i4 + 1);
         int i8 = lFullN.length();
-        System.out.println("В строке " + lFullN + " пробел ' ' находится под индексом " + i4 + " " + i5 + ".");
-        System.out.println("Длина строки " + i8 + " ячейка.");
-        int iLast=0;
-        int iFirst= (i4+1);
-        int iMiddle= (i5+1);
-        System.out.println("Начальные буквы ФИО находятся под индексами "+ iLast+" "+ iFirst+" "+ iMiddle+".");
+        //System.out.println("В строке " + lFullN + " пробел ' ' находится под индексом " + i4 + " " + i5 + ".");
+        //System.out.println("Длина строки " + i8 + " ячейка.");
+        //int iLast = 0;
+        int iFirst = (i4 + 1);
+        int iMiddle = (i5 + 1);
+        //System.out.println("Начальные буквы ФИО находятся под индексами " + iLast + " " + iFirst + " " + iMiddle + ".");
         System.out.println("Верное написание Ф. И. О. сотрудника с заглавных букв — "
-                +lFullN.substring(0, 1).toUpperCase()+lFullN.substring(2,iFirst).toLowerCase()+ " "
-                +lFullN.substring(iFirst, iFirst+1).toUpperCase()+lFullN.substring(iFirst+1,iMiddle).toLowerCase()+ " "
-                +lFullN.substring(iMiddle, iMiddle+1).toUpperCase()+lFullN.substring(iMiddle+1,i8).toLowerCase());
+                + lFullN.substring(0, 1).toUpperCase() + lFullN.substring(2, iFirst).toLowerCase() + " "
+                + lFullN.substring(iFirst, iFirst + 1).toUpperCase() + lFullN.substring(iFirst + 1, iMiddle).toLowerCase() + " "
+                + lFullN.substring(iMiddle, iMiddle + 1).toUpperCase() + lFullN.substring(iMiddle + 1, i8).toLowerCase());
 
         //ещё один вариант решения Задачи 5 я нашёл в интернете. Разабраться в нём трудновато.
         /*String upper_case_line = "";
@@ -60,10 +59,39 @@ public class Main {
             upper_case_line += Character.toUpperCase(word.charAt(0)) + word.substring(1) + " ";
         }
         System.out.println(upper_case_line);*/
-        //Задание 6
-        System.out.println("\nЗадание 6");
-
-
-
+        {
+            //Задание 6
+            System.out.println("\nЗадание 6");
+            String one = "135";
+            String two = "246";
+            int three = one.length() + two.length();
+            StringBuilder oneTwo = new StringBuilder(three);
+            int even = 0;
+            int notEven = 0;
+            for (int i = 0; i < three; i++) {
+                if (i % 2 == 0) {
+                    oneTwo.append(one.charAt(notEven));
+                    notEven++;
+                } else if (i % 2 > 0) {
+                    oneTwo.append(two.charAt(even));
+                    even++;
+                }
+            }
+            System.out.println(oneTwo);
+        }
+        {
+            //Задание 7
+            System.out.println("\nЗадание 7");
+            String string = "aabccddefgghiijjkk";
+            int d = string.length();
+            StringBuilder sting = new StringBuilder();
+            for (int i = 1; i < d; i++) {
+                if (string.charAt(i) == string.charAt(i - 1)) {
+                    sting.append(string.charAt(i));
+                }
+            }
+            String shortString = new String(sting);
+            System.out.println(shortString);
+        }
     }
 }
